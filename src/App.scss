@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+}
+
+.toastify {
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  border: none !important;
+}
+
+li {
+  list-style: none;
+}

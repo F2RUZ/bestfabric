@@ -1,0 +1,150 @@
+.navbar {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1300px;
+    box-sizing: border-box;
+
+    @media (max-width: 1500px) {
+      width: 80%;
+      padding: 0;
+    }
+
+    @media (max-width: 500px) {
+      width: 90%;
+    }
+  }
+
+  &__left,
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__link {
+    color: gray;
+    text-transform: capitalize;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+
+    &:focus {
+      color: #000;
+    }
+  }
+
+  &__logo {
+    max-width: 150px;
+    max-height: 40px;
+  }
+
+  &__image {
+    min-width: 150px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 4.5px;
+    cursor: pointer;
+  }
+
+  &__hr {
+    width: 24px;
+    border: none;
+    border: 1.2px solid;
+  }
+
+  &__language {
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid grey;
+    font-family: "Poppins" !important;
+    font-size: 18px;
+  }
+
+  @media (max-width: 955px) {
+    .navbar__container {
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+
+    .navbar__links {
+      display: none;
+    }
+
+    .navbar__burger {
+      display: flex;
+    }
+
+    .navbar__language {
+      display: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .modal__links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .navbar__language--modal {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid grey;
+      font-size: 18px;
+    }
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+
+  &__content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
